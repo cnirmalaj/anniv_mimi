@@ -1,0 +1,269 @@
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body { 
+    min-height: 100vh; 
+    background:#e7b1c5; 
+    font-family: Arial, sans-serif; 
+    overflow-x: hidden;
+    overflow-y: auto; 
+    position: relative;
+}
+.page {
+     min-width: none;height: 100vh;
+     display: flex; 
+     flex-direction: column; 
+     justify-content: center; 
+     align-items: center; 
+     text-align: center; 
+     position: relative;
+     z-index: 2;
+}
+.coeur { 
+    font-size: 130px; 
+    animation: apparitionCoeur 2s ease-in-out; 
+}
+h1 { 
+    margin-top: 20px; 
+    font-size: 42px; 
+    color: #d6336c; 
+    opacity: 0; 
+    animation: apparitionTexte 2s ease-in-out 1.2s forwards; 
+}
+h2 { 
+    margin-top: 10px; 
+    font-size: 32px; 
+    color: #a61e4d; 
+    opacity: 0; 
+    animation: apparitionTexte 2s ease-in-out 1.8s forwards; 
+}
+@keyframes apparitionCoeur { 
+    0% { 
+        opacity: 0; 
+        transform: scale(0);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes apparitionTexte { 
+    0% { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.coeurs {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.coeurs span {
+    position: absolute;
+    font-size: 25px;
+    opacity: 0.7;
+}
+
+.coeurs span:nth-child(1) { 
+    top: 8%; 
+    left: 10%; 
+}
+.coeurs span:nth-child(2) {
+     top: 15%; 
+     left: 25%; 
+    }
+.coeurs span:nth-child(3) { 
+    top: 7%; 
+    left: 45%; 
+}
+.coeurs span:nth-child(4) { 
+    top: 18%; 
+    left: 65%; 
+}
+.coeurs span:nth-child(5) { 
+    top: 10%; 
+    left: 85%; 
+}
+.coeurs span:nth-child(6) { 
+    top: 30%; 
+    left: 5%; 
+}
+.coeurs span:nth-child(7) { 
+    top: 35%; 
+    left: 20%; 
+}
+.coeurs span:nth-child(8) { 
+    top: 28%; 
+    left: 80%; 
+}
+.coeurs span:nth-child(9) { 
+    top: 45%; 
+    left: 8%; 
+}
+.coeurs span:nth-child(10) { 
+    top: 50%; 
+    left: 92%; 
+}
+.coeurs span:nth-child(11) { 
+    top: 65%; 
+    left: 15%; 
+}
+.coeurs span:nth-child(12) { 
+    top: 70%; 
+    left: 30%; 
+}
+.coeurs span:nth-child(13) { 
+    top: 60%; 
+    left: 75%; 
+}
+.coeurs span:nth-child(14) { 
+    top: 75%; 
+    left: 88%; 
+}
+.coeurs span:nth-child(15) { 
+    top: 85%; 
+    left: 8%; 
+}
+.coeurs span:nth-child(16) { 
+    top: 90%; 
+    left: 25%; 
+}
+.coeurs span:nth-child(17) { 
+    top: 82%; 
+    left: 50%; 
+}
+.coeurs span:nth-child(18) { 
+    top: 88%; 
+    left: 70%; 
+}
+.coeurs span:nth-child(19) { 
+    top: 40%; 
+    left: 45%; 
+}
+.coeurs span:nth-child(20) { 
+    top: 55%; 
+    left: 55%; 
+} 
+@keyframes apparitionCoeur {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes apparitionTexte {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.poeme {
+    position: absolute;
+    left: 8%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30%;
+    color: #a61e4d;
+    font-size: 20px;
+    line-height: 1.6;
+    text-align: left;
+    opacity: 0;
+    animation: apparitionPoeme 2s ease-in-out 2.5s forwards;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes apparitionPoeme {
+    0% {
+        opacity: 0;
+        transform: translate(-30px, -50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0,-50%);
+    }
+}
+
+.page2 {
+    display: none;
+    min-height: 100vh;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+
+.galerie {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    width: 95%;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.galerie img {
+    width: 100%;
+    height: 145px;
+    object-fit: contain;
+    background: rgb(215, 255, 211) ;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.page3 {
+    display: none;
+    min-height: 100vh;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.coeurflottant {
+    font-size: 70px;
+    animation: flotter 2s infinite ease-in-out;
+}
+
+@keyframes flotter {
+    0%{
+        transform: translateX(-150px);
+    }
+    50% {
+        transform: translateX(150px);
+    }
+    100% {
+        transform: translateX(-150px);
+    }
+}
